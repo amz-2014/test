@@ -16,6 +16,10 @@ unsigned int count[numt] = { 0 };
 //printf("Please enter Input: ");
 x = x | 0xffffffff;
 //scanf("%u",&x);
+int nthreads;
+nthreads = omp_get_max_threads();
+printf("Number of threads = %d\n", nthreads);
+
 printf("\nFinding Phi of:  %u\n",x);
 unsigned int remainder = x%(numt -1);
         unsigned int size = x / (numt-1);
